@@ -78,7 +78,7 @@ body,p,span,div,label,h1,h2,h3{color:#e2e8f0!important;}
 def load_model():
     try:
         import tensorflow as tf
-        for p in ['accident_detection_model_new.h5', 'accident_detection_model.h5', 'fine_tuned_best.keras',
+        for p in ['accident_model_compat.h5', 'accident_detection_model_new.h5', 'accident_detection_model.h5', 'fine_tuned_best.keras',
                   'transfer_learning_best.keras', 'cnn_scratch_best.keras']:
             if os.path.exists(p):
                 return tf.keras.models.load_model(p), True, f"Loaded: {p}"
